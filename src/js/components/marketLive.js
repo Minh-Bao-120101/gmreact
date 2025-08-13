@@ -1,4 +1,5 @@
-// /js/components/marketLive.js
+// src/js/components/marketLive.js
+
 let tvLoaderPromise = null;
 
 function loadTradingView() {
@@ -9,7 +10,10 @@ function loadTradingView() {
     const s = document.createElement('script');
     s.src = 'https://s3.tradingview.com/tv.js';
     s.async = true;
-    s.onload = () => (window.TradingView?.widget ? resolve() : reject(new Error('TradingView loaded but widget missing')));
+    s.onload = () => {
+      if (window.TradingView?.widget) resolve();
+      else reject(new Error('TradingView loaded but widget missing'));
+    };
     s.onerror = () => reject(new Error('Failed to load TradingView tv.js'));
     document.head.appendChild(s);
   });
@@ -18,9 +22,8 @@ function loadTradingView() {
 
 // ---- Theme helpers ----
 function detectTheme(el, overrideTheme) {
-  // Ưu tiên: opts.theme -> data-theme -> .dark class -> prefers-color-scheme
   if (overrideTheme) return overrideTheme;
-  if (el?.dataset?.theme) return el.dataset.theme; // "dark" | "light"
+  if (el?.dataset?.theme) return el.dataset.theme;
   const root = document.documentElement;
   const body = document.body;
   if (root.classList.contains('dark') || body.classList.contains('dark')) return 'dark';
@@ -54,13 +57,13 @@ export async function initMarketLive(opts = {}) {
         try { el.__tvWidget.remove(); } catch {}
       }
 
-      // khởi tạo widget (dark-ready)
+      // khởi tạo widget
       el.__tvWidget = new window.TradingView.widget({
         container_id: el.id,
         autosize: true,
         symbol,
         interval,
-        theme,                 // <-- "dark" | "light"
+        theme,
         style: '1',
         locale: 'en',
         hide_top_toolbar: false,
@@ -68,7 +71,6 @@ export async function initMarketLive(opts = {}) {
         studies: []
       });
 
-      // lưu state để đổi theme runtime
       el.__tvState = { symbol, interval, theme };
     });
   } catch (err) {
@@ -86,9 +88,7 @@ export async function setMarketTheme(theme = 'dark') {
 
   containers.forEach((el) => {
     const state = el.__tvState || {};
-    // giữ symbol/interval cũ
     initMarketLive({ symbol: state.symbol, interval: state.interval, theme });
-    // đồng bộ data-theme cho container (tuỳ bạn có dùng CSS kèm theo)
     el.dataset.theme = theme;
   });
 }

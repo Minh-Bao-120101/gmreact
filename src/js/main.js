@@ -8,7 +8,7 @@ import { initAccordion } from "./components/accordion.js";
 import { initModal } from "./components/modal.js";
 import { initTabs } from "./components/account-types-tabs.js";
 import { initMobileMenu } from "./components/togMenu.js";
-import { initMarketLive } from "../js/components/marketLive.js";
+import { initMarketLive } from "./components/marketLive.js";
 
 function safe(fn, name) {
   try { fn?.(); } catch (e) { console.error(`[GM] ${name} failed:`, e); }

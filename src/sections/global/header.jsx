@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../../assets/logo/gm-logo.png"
-
+import logologin from "../../assets/icon/login-icon.svg"
 const Header = () => {
   return (
     <header className="header">
@@ -128,7 +128,7 @@ const Header = () => {
           <div className="mobile-auth-toggle">
             <button id="loginToggleBtn" className="mobile-auth-icon">
               <img
-                src="../../assets/icon/login-icon.svg"
+                src={logologin}
                 alt="Login"
                 style={{ width: "20px", height: "20px" }}
               />
