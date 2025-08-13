@@ -1,0 +1,76 @@
+/* 📦 AUTH MODULE STYLE - Dark Version */
+.auth-wrapper {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 40px;
+  background: #111; /* nền đen */
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  font-family: var(--font-brand, "Bai Jamjuree", sans-serif);
+  color: #fff; /* chữ trắng */
+}
+
+.auth-wrapper h2 {
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 24px;
+  color: var(--color-primary, #ffd422); /* giữ màu vàng */
+}
+
+.auth-form .form-group {
+  margin-bottom: 16px;
+}
+
+.auth-form input[type="text"],
+.auth-form input[type="email"],
+.auth-form input[type="password"],
+.auth-form select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #444; /* viền tối */
+  border-radius: 6px;
+  font-size: 15px;
+  background: #222; /* nền input đen nhạt */
+  color: #fff; /* chữ trắng */
+  box-sizing: border-box;
+}
+
+.auth-form input:focus,
+.auth-form select:focus {
+  border-color: var(--color-primary, #ffd422);
+  outline: none;
+}
+
+.auth-footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.auth-footer a {
+  color: var(--color-primary, #ffd422);
+  text-decoration: underline;
+}
+
+.auth-form button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--color-primary, #ffd422);
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #000; /* chữ đen trên nền vàng */
+  transition: background-color 0.3s ease;
+}
+
+.auth-form button:hover {
+  background-color: #e0a800;
+}
+/* ===== Global Dark Background (full page) ===== */
+html, body {
+  height: 100%;
+  background: #000 !important;   /* nền đen toàn trang */
+  color: #fff;                   /* chữ trắng mặc định */
+}

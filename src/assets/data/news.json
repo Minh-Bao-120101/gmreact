@@ -1,0 +1,131 @@
+[
+  {
+    "id": "report-july-2025",
+    "title": "July 2025 Market Report Released",
+    "category": "news",
+    "date": "2025-07-30",
+    "excerpt": "Summary of key market moves, the impact of inflation, and rate expectations.",
+    "image": "/assets/news/new-images-01.png",
+    "alt": "July 2025 Market Report",
+    "href": "/pages/news/report-july-2025.html"
+  },
+  {
+    "id": "bonus-30-new-accounts",
+    "title": "15% Welcome Bonus for New Accounts",
+    "category": "promotions",
+    "date": "2025-07-15",
+    "excerpt": "Receive a 15% first-deposit bonus. Terms and conditions apply.",
+    "image": "/assets/news/new-images-02.png",
+    "alt": "15% Welcome Bonus for New Accounts",
+    "href": "/pages/promotions/bonus-30.html"
+  },
+  {
+    "id": "mt5-ecn-update",
+    "title": "MT5 Update: Optimized ECN Execution",
+    "category": "platform",
+    "date": "2025-06-20",
+    "excerpt": "Lower latency and improved stability during high-liquidity sessions.",
+    "image": "/assets/news/new-images-03.png",
+    "alt": "MT5 Update – Optimized ECN Execution",
+    "href": "/pages/platform/mt5-ecn.html"
+  },
+  {
+    "id": "commodities-expansion",
+    "title": "Expanded Commodities Offering",
+    "category": "news",
+    "date": "2025-05-28",
+    "excerpt": "Added popular agricultural and metal contracts for trading.",
+    "image": "/assets/news/new-images-04.png",
+    "alt": "Expanded Commodities Offering",
+    "href": "/pages/news/commodities-expansion.html"
+  },
+  {
+    "id": "summer-fee-reduction",
+    "title": "Summer Deposit & Withdrawal Fee Reductions",
+    "category": "promotions",
+    "date": "2025-05-10",
+    "excerpt": "Up to 50% fee discounts for a limited time.",
+    "image": "/assets/news/new-images-05.png",
+    "alt": "Summer Deposit & Withdrawal Fee Reductions",
+    "href": "/pages/promotions/summer-fee-reduction.html"
+  },
+  {
+    "id": "q2-liquidity-partners",
+    "title": "Additional Liquidity Partners – Q2 2025",
+    "category": "news",
+    "date": "2025-04-22",
+    "excerpt": "Deeper order book depth and enhanced execution quality.",
+    "image": "/assets/news/new-images-06.png",
+    "alt": "Additional Liquidity Partners",
+    "href": "/pages/news/q2-liquidity-partners.html"
+  },
+  {
+    "id": "zero-commission-week",
+    "heroImage": "/assets/news/zero-commission-hero.jpg",
+    "image": "/assets/news/new-images-07.png",
+    "title": "Zero-Commission Week",
+    "category": "promotions",
+    "date": "2025-08-10",
+    "excerpt": "Commission-free trading on 50+ instruments. Limited availability.",
+    "alt": "Zero-Commission Week",
+    "href": "/pages/promotions/zero-commission-week.html",
+    "featured": true,
+    "tags": ["campaign"],
+    "campaignLabel": "Summer 2025",
+    "campaignColor": "#ffd422",
+    "start": "2025-08-10",
+    "end": "2025-08-25",
+    "ctaText": "Join Now",
+    "ctaHref": "/pages/promotions/zero-commission-week.html"
+  },
+  {
+    "id": "platform-status-dashboard",
+    "title": "Real-Time Platform Status Dashboard Launched",
+    "category": "platform",
+    "date": "2025-03-18",
+    "excerpt": "Track uptime, incidents, and maintenance in real time.",
+    "image": "/assets/news/new-images-08.png",
+    "alt": "Platform Status Dashboard",
+    "href": "/pages/platform/status-dashboard.html"
+  },
+  {
+    "id": "education-webinar-series",
+    "title": "Webinar Series: Session-Based Trading Strategies",
+    "category": "news",
+    "date": "2025-03-04",
+    "excerpt": "Three live sessions, hands-on materials, and expert Q&A.",
+    "image": "/assets/news/new-images-10.png",
+    "alt": "Education Webinar Series",
+    "href": "/pages/news/education-webinar-series.html"
+  },
+  {
+    "id": "spring-deposit-boost",
+    "title": "Spring Deposit Boost +15%",
+    "category": "promotions",
+    "date": "2025-02-20",
+    "excerpt": "An additional 15% on deposits for new and existing accounts.",
+    "image": "/assets/news/new-images-11.png",
+    "alt": "Spring Deposit Boost",
+    "href": "/pages/promotions/spring-deposit-boost.html"
+  },
+  {
+    "id": "mt5-build-stability",
+    "title": "New MT5 Build: Enhanced Connection Stability",
+    "category": "platform",
+    "date": "2025-02-02",
+    "excerpt": "Network optimizations and fixes for peak-hour disconnects.",
+    "image": "/assets/news/new-images-12.png",
+    "alt": "MT5 Build – Enhanced Stability",
+    "href": "/pages/platform/mt5-build-stability.html"
+  },
+  {
+    "id": "new-indices-listing",
+    "title": "Six New Equity Indices Listed",
+    "category": "news",
+    "date": "2025-01-25",
+    "excerpt": "Added widely followed European and Asian benchmarks.",
+    "image": "/assets/news/new-images-13.png",
+    "alt": "New Indices Listing",
+    "href": "/pages/news/new-indices-listing.html"
+  }
+]

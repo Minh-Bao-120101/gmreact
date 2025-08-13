@@ -1,0 +1,126 @@
+/* =========================================================
+   COMPONENT: GM CARD – generic, reusable
+   ========================================================= */
+
+.gm-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface, #fff);
+  border: 1px solid var(--color-border, #e6e6e6);
+  border-radius: var(--radius-lg, 14px);
+  box-shadow: var(--shadow-md, 0 2px 12px rgba(0, 0, 0, 0.06));
+  overflow: hidden; /* bo góc cho media */
+  transition: transform 0.18s ease, box-shadow 0.18s ease,
+    border-color 0.18s ease;
+  height: 100%;
+}
+
+.gm-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg, 0 10px 24px rgba(0, 0, 0, 0.1));
+  border-color: color-mix(
+    in oklab,
+    var(--color-border, #e6e6e6) 70%,
+    var(--color-primary, #ffd422)
+  );
+}
+
+/* Media (img/thumbnail/video) */
+.gm-card__media {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #f6f6f6;
+}
+.gm-card__media img,
+.gm-card__media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Body */
+.gm-card__body {
+  padding: var(--space-lg, 20px);
+}
+.gm-card__eyebrow {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--color-text, #3c3c3c);
+  opacity: 0.7;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+}
+.gm-card__title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-text-strong, #111);
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+.gm-card__desc {
+  color: var(--color-text, #3c3c3c);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Footer */
+.gm-card__footer {
+  margin-top: auto;
+  padding: var(--space-md, 16px) var(--space-lg, 20px);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-top: 1px solid var(--color-border, #eee);
+}
+.gm-card__meta {
+  font-size: 0.85rem;
+  color: #666;
+  margin-left: auto;
+}
+
+/* Inline badge/tag */
+.gm-card__tag {
+  display: inline-block;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: #111;
+  color: #fff;
+}
+
+/* Variants */
+.gm-card--promo {
+  border-color: color-mix(in oklab, #ffd422 40%, #e6e6e6);
+}
+.gm-card--highlight .gm-card__title {
+  color: var(--color-primary, #ffd422);
+}
+
+/* Compact density */
+.gm-card--compact .gm-card__body {
+  padding: var(--space-md, 16px);
+}
+.gm-card--compact .gm-card__footer {
+  padding: var(--space-sm, 12px) var(--space-md, 16px);
+}
+
+/* Grid helper (tuỳ dùng) */
+.gm-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-xl, 24px);
+}
+
+/* Responsive: tighten text a chút ở mobile */
+@media (max-width: 640px) {
+  .gm-card__title {
+    font-size: 1.05rem;
+  }
+  .gm-card-grid {
+    gap: var(--space-lg, 20px);
+  }
+}

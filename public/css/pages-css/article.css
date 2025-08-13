@@ -1,0 +1,260 @@
+/* =========================================================
+   ARTICLE DETAIL – Layout cho trang bài viết
+   ========================================================= */
+.article__container {
+  padding-top: 48px;
+  padding-bottom: 72px;
+}
+
+.breadcrumb {
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+  color: #9aa0a6;
+}
+.breadcrumb a {
+  text-decoration: underline;
+}
+
+.article {
+  background: #0f0f12;
+  border: 1px solid #1e1e24;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.article__header {
+  padding: 24px 24px 0;
+  display: grid;
+  gap: 12px;
+}
+.article__title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #f3f4f6;
+  line-height: 1.3;
+}
+.article__meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #9aa0a6;
+  font-size: 0.95rem;
+}
+
+.article__cover {
+  margin-top: 12px;
+  background: #141419;
+  aspect-ratio: 16/9;
+}
+.article__cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.article__content {
+  padding: 24px;
+  display: grid;
+  gap: 16px;
+  color: #cbd5e1;
+}
+.article__content h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #e5e7eb;
+  margin-top: 8px;
+}
+.article__content ul,
+.article__content ol {
+  padding-left: 1.25rem;
+}
+.article__content li {
+  margin: 6px 0;
+}
+
+.article__footer {
+  padding: 20px 24px 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  border-top: 1px solid #1e1e24;
+}
+.article__tools {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+}
+
+.article__tool-btn {
+  min-width: 44px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #242632;
+  background: #0f131a;
+  color: #cbd5e1;
+  padding: 0 12px;
+  font-weight: 600;
+}
+.article__tool-btn:hover {
+  border-color: #3a4155;
+}
+
+@media (min-width: 1024px) {
+  .article__title {
+    font-size: 2rem;
+  }
+}
+
+/* Pills kế thừa từ gm-card, đảm bảo tương phản trong khối meta */
+.article__meta .gm-pill {
+  transform: translateY(-1px);
+}
+
+/* === HERO BANNER === */
+.article-hero {
+  position: relative;
+  min-height: 52vh;
+  display: grid;
+  place-items: center;
+  padding: 56px 16px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #1e1e24;
+  background: #0f0f12; /* fallback nếu chưa có ảnh */
+}
+
+.article-hero__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center center;
+  transform: scale(1.02);
+  filter: saturate(1.05) contrast(1.02);
+}
+
+.article-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(6, 8, 12, 0.55) 0%,
+    rgba(6, 8, 12, 0.75) 50%,
+    rgba(6, 8, 12, 0.85) 100%
+  );
+}
+
+.article-hero__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 880px;
+  text-align: center;
+  padding: 0 12px;
+}
+
+.article-hero__title {
+  font-size: clamp(1.75rem, 1.2rem + 2vw, 2.5rem);
+  font-weight: 800;
+  color: #f3f4f6;
+  line-height: 1.25;
+  margin-bottom: 10px;
+}
+
+.article-hero__excerpt {
+  color: #cbd5e1;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.article-hero__meta {
+  margin-top: 14px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  color: #9aa0a6;
+  font-size: 0.95rem;
+}
+
+/* === RELATED POSTS === */
+.related {
+  margin-top: 40px;
+  background: #0f0f12;
+  border: 1px solid #1e1e24;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.related__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.related__title {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: #e5e7eb;
+}
+
+.related__grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 720px) {
+  .related__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* card thu nhỏ tái dùng gm-card */
+.related .gm-card__title {
+  font-size: 1rem;
+}
+.related .gm-card__body {
+  padding: 12px;
+  gap: 8px;
+}
+.related .gm-card__media {
+  aspect-ratio: 16/9;
+}
+
+/* CSS để hiển thị ảnh full-width */
+.article-hero {
+  position: relative;
+  min-height: 320px;
+  color: #fff;
+}
+
+.article-hero__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.6);
+}
+
+.article-hero__overlay {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 320px;
+  text-align: center;
+}
+
+.article-hero__title {
+  font-size: 2rem;
+  margin-top: 0.5rem;
+}
+
+.article-hero__excerpt {
+  font-size: 1.125rem;
+  margin-top: 0.5rem;
+  opacity: 0.9;
+}

@@ -1,0 +1,239 @@
+/* ==========================
+   MODAL COMPONENT (dark translucent)
+   ========================== */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  z-index: 2000;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+/* = Overlay
+   ------------------------ */
+/* NOTE: chỉnh độ mờ overlay ở --modal-overlay-opacity */
+.modal__overlay {
+  position: absolute;
+  inset: 0;
+  --modal-overlay-opacity: 0.7; /* 0.6 – 0.85 */
+  background: rgba(0, 0, 0, var(--modal-overlay-opacity));
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* = Panel
+   ------------------------ */
+/* NOTE: chỉnh độ mờ panel ở --modal-panel-opacity */
+.modal__content {
+  position: relative;
+  --modal-panel-opacity: 0.92; /* 0.9 – 0.96 */
+  background: rgba(15, 15, 18, var(--modal-panel-opacity));
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+
+  padding: var(--space-xl);
+  max-width: 560px;
+  width: 100%;
+  z-index: 2;
+  animation: fadeIn 0.24s ease;
+  color: #e5e7eb;
+}
+
+.modal__title {
+  margin-bottom: var(--space-md);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f3f4f6;
+}
+
+.modal__close {
+  position: absolute;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  background: transparent;
+  color: #cbd5e1;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none;
+}
+.modal__close:hover {
+  color: #fff;
+}
+
+/* = Form - inputs/select
+   ------------------------ */
+/* NOTE: chỉnh nền input/select ở --field-bg, màu viền focus theo token */
+.modal__form {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.modal__form input,
+.modal__form select {
+  width: 100%;
+  padding: 0.75rem 0.875rem;
+  font-size: 1rem;
+  color: #e5e7eb;
+  --field-bg: 0.35; /* 0.3 – 0.55 */
+  background: rgba(0, 0, 0, var(--field-bg));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-sm);
+  outline: none;
+  transition: border-color 0.18s ease, background 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.modal__form input:hover,
+.modal__form select:hover {
+  background: rgba(0, 0, 0, 0.45);
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+.modal__form input:focus,
+.modal__form select:focus {
+  background: rgba(0, 0, 0, 0.5);
+  border-color: #ffd422; /* vàng chính */
+  box-shadow: 0 0 0 3px rgba(207, 10, 10, 0.18);
+}
+
+.modal__form input::placeholder {
+  color: #a5a69a;
+  opacity: 0.8;
+}
+
+/* Select arrow (WebKit) */
+.modal__form select {
+  -webkit-appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, #cbd5e1 50%),
+    linear-gradient(-45deg, transparent 50%, #cbd5e1 50%),
+    linear-gradient(to right, transparent, transparent);
+  background-position: calc(100% - 18px) calc(50% - 3px),
+    calc(100% - 12px) calc(50% - 3px), calc(100% - 2.25rem) 50%;
+  background-size: 6px 6px, 6px 6px, 1px 50%;
+  background-repeat: no-repeat;
+  padding-right: 2.25rem;
+}
+
+/* = Account selection – tiles
+   ------------------------ */
+/* NOTE: dùng nếu form có phần “select account” kiểu danh sách/ô lựa chọn */
+
+.account-tiles {
+  --tile-gap: 12px; /* khoảng cách giữa tiles */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--tile-gap);
+  margin-top: 4px;
+}
+@media (min-width: 540px) {
+  .account-tiles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 920px) {
+  .account-tiles {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* NOTE: chỉnh nền tile ở --tile-bg, hover/active giữ cùng palette */
+.account-tile {
+  position: relative;
+  --tile-bg: 0.35; /* 0.3 – 0.55 */
+  background: rgba(0, 0, 0, var(--tile-bg));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 14px;
+  color: #e5e7eb;
+  display: grid;
+  gap: 8px;
+  cursor: pointer;
+  transition: border-color 0.18s ease, background 0.18s ease,
+    box-shadow 0.18s ease, transform 0.18s ease;
+}
+.account-tile:hover {
+  background: rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.16);
+  transform: translateY(-1px);
+}
+.account-tile.is-active,
+.account-tile:focus-within {
+  border-color: #ffd422;
+  box-shadow: 0 0 0 3px rgba(255, 212, 34, 0.18);
+}
+
+/* nội dung tile */
+.account-tile__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.account-tile__title {
+  font-weight: 700;
+  color: #f3f4f6;
+}
+.account-tile__badge {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+}
+.account-tile__desc {
+  color: #b8c0cc;
+  line-height: 1.5;
+}
+
+/* radio/checkbox ẩn + trạng thái chọn */
+.account-tile input[type="radio"],
+.account-tile input[type="checkbox"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+.account-tile input:checked ~ .account-tile__state,
+.account-tile.is-active .account-tile__state {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 12px;
+  border: 2px solid #ffd422;
+  box-shadow: 0 0 0 3px rgba(255, 212, 34, 0.18);
+  pointer-events: none;
+}
+
+/* = Footer actions (optional) */
+.modal__actions {
+  margin-top: var(--space-lg);
+  display: flex;
+  gap: var(--space-sm);
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .modal__content {
+    animation: none;
+  }
+}
+
+/* Fix right arrow for select in modal */
+.modal__form select {
+  appearance: none; /* Remove default arrow */
+  padding-right: 2.5rem; /* Space for arrow */
+  background-image: url("data:image/svg+xml,%3Csvg fill='none' stroke='%23FFD422' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center; /* Fixed on the right */
+  background-size: 1rem;
+}

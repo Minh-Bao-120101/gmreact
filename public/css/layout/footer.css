@@ -1,0 +1,99 @@
+/* Base */
+.gm-footer.dark-mode {
+  background: #0d0d0d;
+  color: #fff;
+  font-size: 16px;
+}
+.gm-footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 20px;
+}
+.gm-footer a { text-decoration: none; }
+
+/* Topbar */
+.ft-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: inherit;
+}
+.brand-logo { height: 40px; width: auto; }
+.brand-text { font-weight: 800; line-height: 1; letter-spacing: .02em; }
+
+.social-wrap {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.social-wrap a {
+  color: #b0b0b0;
+  font-size: 22px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color .2s ease;
+}
+.social-wrap a:hover { color: #ffd422; }
+.hotline { font-size: 18px; font-weight: 700; }
+
+/* Separator */
+.ft-sep {
+  border: 0;
+  border-top: 1px solid #333;
+  margin: 20px 0;
+}
+
+/* Main */
+.ft-main {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 40px 32px;
+}
+.company p { margin: 0 0 14px; color: #ccc; }
+.company h4 { margin: 6px 0 12px; font-size: 18px; }
+.company-list { list-style: none; margin: 0 0 12px; padding: 0; }
+.company-list li {
+  margin: 8px 0;
+  color: #ccc;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.company-list i { color: #999; margin-top: 2px; }
+
+/* Columns */
+.col h4 { margin: 0 0 12px; font-size: 18px; font-weight: 700; color: #ccc; }
+.col ul { list-style: none; margin: 0; padding: 0; }
+.col li { margin: 10px 0; }
+.col a {
+  color: #fff;
+  transition: color .2s ease;
+}
+.col a:hover { color: #ffd422; }
+
+/* Trading Platforms */
+.trading-col .app-link { display: inline-flex; align-items: center; margin-bottom: 10px; }
+.trading-col .app-link img { height: 38px; width: auto; }
+
+/* Bottom */
+.ft-bottom {
+  padding-top: 8px;
+  color: #aaa;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .ft-main { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+  .ft-topbar { flex-direction: column; align-items: flex-start; }
+  .ft-main { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,36 @@
+/* 🎯 SHARED BUTTON STYLE - Dark Version */
+.btn {
+  display: inline-block;
+  width: 100%;
+  padding: 14px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-family: var(--font-brand, "Bai Jamjuree", sans-serif);
+  color: #fff; /* chữ trắng mặc định */
+  background: #222; /* nền mặc định tối */
+}
+
+.btn:hover {
+  background: #333; /* hover nền tối hơn */
+}
+
+.btn.btn-primary {
+  background: var(--color-primary, #ffd422); /* vàng nhấn */
+  color: var(--color-on-primary, #000); /* chữ đen để nổi trên vàng */
+}
+
+.btn.btn-primary:hover {
+  background: #f2c800; /* vàng hơi đậm hơn khi hover */
+}
+
+/* ===== Global Dark Background (full page) ===== */
+html, body {
+  height: 100%;
+  background: #000 !important;   /* nền đen toàn trang */
+  color: #fff;                   /* chữ trắng mặc định */
+}

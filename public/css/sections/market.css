@@ -1,0 +1,31 @@
+/* === SECTION 2: MARKET LIVE === */
+#market-live.market-live-section {
+  background-color: #0e0e0e;
+  padding: var(--space-xxl) var(--space-md);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.market-card {
+  width: 100%;
+  max-width: 1080px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow 0.6s ease;
+  box-shadow: 0 0 0 transparent;
+}
+
+.market-card.glow-on-scroll.show {
+  box-shadow: 0 0 60px rgba(255, 212, 34, 0.4), 0 0 10px rgba(255, 212, 34, 0.2);
+}
+
+.market-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  filter: brightness(1.05) contrast(1.1) saturate(1.2);
+  transition: opacity 1s ease;
+}

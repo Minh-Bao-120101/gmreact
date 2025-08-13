@@ -1,0 +1,74 @@
+/* GLOW EFFECT – Áp dụng cho text hoặc button */
+.glow {
+  text-shadow: 0 0 5px #ffd422, 0 0 10px #ffd422, 0 0 15px #ffd422;
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    text-shadow: 0 0 5px #ffd422, 0 0 10px #ffd422, 0 0 15px #ffd422;
+  }
+  50% {
+    text-shadow: 0 0 10px #ff8c00, 0 0 20px #ff8c00, 0 0 30px #ffd422;
+  }
+}
+
+/*  Fade */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.glow-on-scroll {
+  transition: box-shadow 0.6s ease;
+  box-shadow: none;
+}
+
+.glow-on-scroll.show {
+  box-shadow: 0 0 60px rgba(255, 212, 34, 0.4),
+              0 0 10px rgba(255, 212, 34, 0.2);
+}
+
+/* Slide Up */
+.slide-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.slide-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Zoom In */
+.zoom-in {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.zoom-in.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Blur In */
+.blur-in {
+  opacity: 0;
+  filter: blur(4px);
+  transition: opacity 0.6s ease, filter 0.6s ease;
+}
+
+.blur-in.show {
+  opacity: 1;
+  filter: blur(0);
+}

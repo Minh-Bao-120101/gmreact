@@ -1,0 +1,46 @@
+.gm-tabs {
+  display: inline-flex;
+  gap: var(--space-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xs);
+  background: var(--color-surface);
+  margin: var(--space-lg) auto var(--space-md);
+}
+
+.gm-tab {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--color-text-strong);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.gm-tab:hover {
+  color: var(--color-primary);
+}
+
+.gm-tab.is-active {
+  background: #111;
+  color: #fff;
+}
+
+.gm-panels {
+  margin-top: var(--space-md);
+}
+.gm-panel {
+  display: none;
+}
+.gm-panel.is-active {
+  display: block;
+}
+
+.gm-actions {
+  margin-top: var(--space-md);
+}
+.gm-actions .btn {
+  min-width: 160px;
+}

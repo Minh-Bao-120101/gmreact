@@ -1,0 +1,61 @@
+/* =============================
+   MODERN ACCORDION UI
+============================= */
+
+.accordion__item {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
+  margin-bottom: var(--space-md);
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.accordion__item:hover {
+  border-color: var(--color-primary);
+}
+
+.accordion__trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: var(--space-md);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text-strong);
+  transition: color 0.2s ease;
+}
+
+.accordion__icon {
+  font-size: 1.25rem;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.accordion__item.active .accordion__icon {
+  transform: rotate(45deg); /* + trở thành × */
+}
+
+.accordion__content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding: 0 var(--space-md);
+  transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+}
+
+.accordion__item.active .accordion__content {
+  max-height: 500px;
+  opacity: 1;
+  padding: var(--space-sm) var(--space-md) var(--space-md);
+}
+
+.accordion__content p {
+  margin-bottom: var(--space-sm);
+  text-align: left;
+  line-height: 1.6;
+}

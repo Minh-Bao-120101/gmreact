@@ -1,0 +1,29 @@
+/* ========================================
+   SECTION: CTA END
+======================================== */
+.cta-end-section {
+  background-color: #0e0e0e;
+  color: #fff;
+  padding: 6rem 1rem;
+  text-align: center;
+  position: relative;
+}
+
+.cta-end__content {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.cta-end__heading {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.cta-end__subtext {
+  font-size: var(--font-size-base);
+  color: #ccc;
+  margin-bottom: 2.5rem;
+}
+
+/* Reuse .btn-group from components/button.css */

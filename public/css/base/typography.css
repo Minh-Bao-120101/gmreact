@@ -1,0 +1,79 @@
+/* =========================================================
+    TYPOGRAPHY – Font, Headings, Paragraphs, Links
+   ========================================================= */
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--color-text-strong);
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: var(--font-size-xxl);
+}
+h2 {
+  font-size: var(--font-size-xl);
+}
+h3 {
+  font-size: var(--font-size-lg);
+}
+h4 {
+  font-size: 1.125rem;
+} /* ~18px */
+h5 {
+  font-size: 1rem;
+}
+h6 {
+  font-size: 0.875rem;
+}
+
+/* Paragraphs */
+p {
+  margin-bottom: var(--space-md);
+}
+
+/* Links */
+a {
+  color: var(--color-primary);
+  transition: color 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-accent);
+}
+
+/* Strong & Emphasis */
+strong {
+  font-weight: 700;
+  color: var(--color-text-strong);
+}
+
+em {
+  font-style: italic;
+}
+
+/* Blockquote */
+blockquote {
+  border-left: 4px solid var(--color-primary);
+  padding-left: var(--space-md);
+  margin: var(--space-md) 0;
+  color: var(--color-text);
+  font-style: italic;
+}

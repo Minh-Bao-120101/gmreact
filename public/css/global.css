@@ -1,0 +1,44 @@
+/* === 1. BASE: Reset, Tokens, Typography, Animation === */
+@import url("./base/reset.css");
+@import url("./base/tokens.css");
+@import url("./base/typography.css");
+@import url("./base/animation.css");
+
+/* === 2. LAYOUT: Container, Header, Footer, Mobile === */
+@import url("../css/layout/container.css");
+@import url("../css/layout/header.css");
+@import url("../css/layout/footer.css");
+
+/* === 3. SECTIONS: Hero → CTA cuối === */
+@import url("../css/sections/hero.css");
+@import url("../css/sections/market.css");
+@import url("../css/sections/account.css");
+@import url("../css/sections/deposit.css");
+@import url("../css/sections/partner.css");
+@import url("../css/sections/cta-end.css");
+@import url("../css/sections/partner-main.css");
+@import url("../css/sections/help-center.css");
+@import url("../css/sections/platforms.css");
+
+/* === 4. COMPONENTS: UI nhỏ dùng lại === */
+@import url("../css/components/button.css");
+@import url("../css/components/card.css");
+/* @import url("../css/components/form.css"); */
+@import url("../css/components/logo.css");
+@import url("../css/components/auth.css");
+@import url("../css/components/accordion.css");
+@import url("../css/components/modal.css");
+@import url("../css/components/table.css");
+@import url("../css/components/tabs.css");
+/* ... các @import hiện có ... */
+@import url("../css/components/gm-card.css");
+@import url("../css/pages-css/news-promotions.css");
+
+/* === 5. PAGES-CSS: Tuỳ chỉnh theo page nếu cần === */
+/* @import url("../css/pages-css/home.css"); */
+@import url("../css/sections/partner-detail.css");
+@import url("../css/sections/account-types.css");
+@import url("../css/pages-css/article.css");
+
+/* === 6. TEMP STYLE (DEV only – xoá khi production) === */
+@import url("../css/style.css");

@@ -1,0 +1,107 @@
+/* ========================================
+   SECTION: ACCOUNT TYPES (3 Cards)
+======================================== */
+.account-section {
+  background-color: #0e0e0e;
+  padding: 5rem 1rem;
+}
+
+.account-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-xl);
+}
+
+.account-card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.account-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(255, 212, 34, 0.25);
+}
+.account-card__icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto var(--space-md); /* 👈 căn giữa và cách dưới */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.account-card__icon img,
+.account-card__icon svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.account-card__heading {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-strong);
+  margin-top: var(--space-sm);
+}
+
+.account-card__subtext {
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  margin: var(--space-sm) 0 var(--space-md);
+}
+
+.account-card__info-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: var(--space-lg);
+  color: var(--color-text);
+}
+
+.account-card__info-list li {
+  margin-bottom: var(--space-xs);
+}
+
+/* Glow Effect Trigger */
+.account-section.glow-on-scroll.show .account-card {
+  box-shadow: 0 0 60px rgba(255, 212, 34, 0.4), 0 0 10px rgba(255, 212, 34, 0.2);
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 720px;
+  margin: var(--space-xxl) auto var(--space-xl);
+  padding: 0 var(--space-md);
+}
+
+.section-heading__title {
+  font-size: var(--font-size-xxl); /* 48px */
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--space-sm);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.section-heading__subtext {
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  opacity: 0.85;
+  line-height: 1.5;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* 👇 GLOW + SLIDE IN ON SCROLL */
+.section-heading__title.glow-in {
+  opacity: 1;
+  transform: translateY(0);
+  text-shadow: 0 0 10px rgba(255, 212, 34, 0.6),
+    0 0 20px rgba(255, 212, 34, 0.3);
+}

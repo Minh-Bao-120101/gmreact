@@ -1,0 +1,83 @@
+/* =========================================================
+   RESET.CSS – Clean, modern, and minimal reset
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body, sans-serif);
+  font-size: var(--font-size-base, 16px);
+  background-color: var(--color-background, #ffffff);
+  color: var(--color-text, #3c3c3c);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Remove default list styles */
+ul,
+ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Remove anchor underline and inherit color */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Button defaults */
+button {
+  font: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Input & textarea defaults */
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+/* Image defaults */
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Table defaults */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Heading default spacing reset */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  line-height: 1.2;
+}

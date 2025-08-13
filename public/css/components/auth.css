@@ -1,0 +1,43 @@
+/* =========================================================
+   AUTH BUTTONS – For Sign In / Sign Up Only (Reusable)
+   ========================================================= */
+
+.auth-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 140px;
+  min-height: 50px;
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.auth-button--login {
+  background-color: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.auth-button--login:hover {
+  border-color: var(--color-text-strong);
+  color: var(--color-text-strong);
+}
+
+.auth-button--signup {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+.auth-button--signup:hover {
+  background-color: var(--color-accent);
+  color: var(--color-on-primary); /* 👈 Giữ chữ đen trên nền cam */
+}
+
+.auth-button--signup:hover {
+  background-color: #f5c700;
+}

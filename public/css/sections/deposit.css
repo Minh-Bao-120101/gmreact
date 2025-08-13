@@ -1,0 +1,70 @@
+/* Điều chỉnh rộng PC */
+
+.deposit-section.wide .container {
+  max-width: 1600px;
+}
+/* Áp dụng chung*/
+.deposit-section {
+  background-color: #0e0e0e;
+  color: #fff;
+  padding: 5rem 1rem;
+  text-align: center;
+}
+
+.deposit__methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.deposit-card {
+  background: var(--color-surface);
+  color: var(--color-text);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.05); /* 👈 Viền sáng nhẹ mặc định */
+  border: 1px solid rgba(255, 255, 255, 0.05); /* 👈 Viền trong suốt giúp phân lớp */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.deposit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 32px rgba(255, 212, 34, 0.25);
+  border-color: rgba(255, 212, 34, 0.4);
+}
+
+.deposit-icon {
+  width: 48px;
+  margin-bottom: 1.25rem;
+  transition: transform 0.3s ease;
+}
+
+.deposit-card:hover .deposit-icon {
+  transform: scale(1.1);
+}
+
+.heading__title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.heading__subtext {
+  font-size: 1rem;
+  color: #ccc;
+  margin-top: 0.75rem;
+}
+
+/* #card glassmorphism
+.deposit-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  color: #fff;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+} 
+  
+*/

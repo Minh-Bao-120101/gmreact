@@ -1,0 +1,67 @@
+/* =========================================================
+   ACCOUNT TYPES PAGE – Sections styling (FINAL)
+   ========================================================= */
+
+/* ===== Section wrapper ===== */
+.at-section {
+  padding-block: var(--space-xxl);
+  text-align: center;
+  background: transparent;
+}
+
+/* =========================================================
+   FEATURES GRID (3 CARDS)
+   ========================================================= */
+.at-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-xl);
+  margin-top: var(--space-xl);
+  align-items: stretch; /* ensure cards same height */
+  position: relative;
+  isolation: isolate; /* prevent parent pseudo-elements bleeding */
+}
+
+/* Nếu lỡ gắn glow-on-scroll lên grid, vô hiệu hóa lớp nền của nó */
+.at-grid-3.glow-on-scroll::before,
+.at-grid-3.glow-on-scroll::after {
+  display: none !important;
+}
+
+/* Card */
+.at-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-md);
+}
+
+/* =========================================================
+   CTA BLOCK
+   ========================================================= */
+.at-cta {
+  background: #111;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xxl) var(--space-xl);
+  box-shadow: var(--shadow-md);
+}
+
+.at-cta .section__title,
+.at-cta .section__desc {
+  color: #fff;
+}
+
+/* =========================================================
+   RESPONSIVE TWEAKS
+   ========================================================= */
+@media (max-width: 640px) {
+  .at-table {
+    min-width: 640px; /* allow smaller scroll width on very small screens */
+  }
+}

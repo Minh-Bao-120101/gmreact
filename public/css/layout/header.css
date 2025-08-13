@@ -1,0 +1,447 @@
+/* ========================
+   HEADER LAYOUT - PC
+   ======================== */
+
+.header {
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: var(--font-heading);
+}
+
+.header__inner {
+  display: grid;
+  grid-template-columns: auto minmax(0, 880px) auto; /* Logo - Menu - Auth */
+  align-items: center;
+  height: 72px;
+  padding: 0 var(--space-xxl);
+  column-gap: var(--space-xl);
+}
+
+/* ===== LOGO ===== */
+.header__logo {
+  justify-self: start;
+}
+.header__logo a {
+  display: flex;
+  align-items: center;
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-text-strong);
+  text-decoration: none;
+}
+.logo-img {
+  max-height: 36px;
+  display: block;
+}
+
+/* ===== MENU WRAPPER ===== */
+.header__nav-wrapper {
+  justify-self: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: visible;
+}
+
+/* ===== MAIN NAV ===== */
+.header__nav {
+  display: flex;
+  gap: var(--space-xl);
+  font-weight: 600;
+  font-size: var(--font-size-base);
+  position: relative;
+}
+
+.header__nav > li {
+  position: relative;
+  white-space: nowrap;
+}
+
+.header__nav > li > a {
+  padding: var(--space-sm) var(--space-xs);
+  color: var(--color-text-strong);
+  display: block;
+  transition: color 0.2s ease;
+}
+
+.header__nav > li > a:hover {
+  color: var(--color-primary);
+}
+
+/* ===== MENU CHA ===== */
+.header__nav > li {
+  position: relative;
+}
+
+/* Tạo vùng hover nối liền xuống dưới */
+.header__nav > li::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 11px; /* 👈 vùng nối giữa menu cha và dropdown */
+  background: transparent;
+  pointer-events: auto;
+  z-index: 10;
+}
+
+/* ===== DROPDOWN ===== */
+.header__nav ul {
+  display: none;
+  position: absolute;
+  top: calc(100% + 1px); /* 👈 căn chỉnh với ::after */
+  left: 0;
+  min-width: 220px;
+
+  /* --- Cập nhật mới: lớp phủ màu đen mờ, dễ chỉnh opacity --- */
+  --dropdown-bg-opacity: 0.3; /* 👈 anh chỉnh giá trị này để thay đổi độ mờ */
+  background: rgba(0, 0, 0, var(--dropdown-bg-opacity));
+  backdrop-filter: blur(8px); /* nhẹ hơn để không mất nét chữ */
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: 0 8px 16px var(--color-shadow);
+  padding: var(--space-xs) 0;
+  z-index: 999;
+}
+
+/* ===== DROPDOWN ===== */
+/*.header__nav ul {*/
+/*  display: none;*/
+/*  position: absolute;*/
+ /* 👈 căn chỉnh với ::after 
+  left: 0;
+  min-width: 220px;
+
+   --- Cập nhật mới: lớp phủ màu để chữ dễ đọc --- 
+  background: rgba(255, 255, 255, 0.92); /* nền trắng mờ 
+  backdrop-filter: blur(8px); /* làm mờ nền phía sau 
+  
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: 0 8px 16px var(--color-shadow);
+  padding: var(--space-xs) 0;
+  z-index: 999;
+}
+
+/* Hover để hiển thị menu con */
+.header__nav > li:hover > ul {
+  display: block;
+}
+
+/* ITEM DROPDOWN */
+.header__nav ul li a {
+  padding: var(--space-sm) var(--space-md);
+  display: block;
+  font-weight: 500;
+  color: var(--color-text);
+  transition: color 0.2s ease;
+}
+
+.header__nav ul li a:hover {
+  color: var(--color-primary);
+}
+
+/* ===== DROPDOWN (LEVEL 2) ===== */
+.header__nav ul ul {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 2px;
+  border-radius: var(--radius-md);
+  box-shadow: 0 8px 16px var(--color-shadow);
+}
+
+.header__nav li:hover > ul {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(11px); /* 👈 giữ nguyên để không nhảy */
+}
+/* ===== AUTH BUTTONS ===== */
+.header__auth {
+  justify-self: end;
+  display: flex;
+  gap: var(--space-sm);
+}
+.auth-button {
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  text-decoration: none;
+  transition: background 0.2s ease;
+  border: 1px solid transparent;
+}
+.auth-button--login {
+  color: var(--color-text-strong);
+  background: transparent;
+  border: 1px solid var(--color-border);
+}
+.auth-button--login:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+.auth-button--signup {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+.auth-button--signup:hover {
+  background-color: var(--color-accent);
+}
+/* 
+@media (max-width: 991px) {
+  .header__nav,
+  .header__auth {
+    display: none !important;
+  }
+} */
+
+
+/* ========================
+   RESPONSIVE MOBILE ONLY
+   ======================== */
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  }
+
+  .header__inner {
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    padding: 0 var(--space-lg);
+    height: 64px;
+  }
+
+  .header__mobile-toggle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .mobile-auth-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #ffd600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .mobile-login-img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .hamburger-btn {
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+  }
+
+  .hamburger-line {
+    width: 20px;
+    height: 2px;
+    background-color: #000;
+    border-radius: 1px;
+  }
+
+  .mobile-menu {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 64px);
+    
+   
+    display: none;
+    overflow-y: auto;
+    z-index: 999;
+    padding: 20px;
+    --dropdown-bg-opacity: 0.5; /* 👈 anh chỉnh giá trị này để thay đổi độ mờ */
+  background: rgba(0, 0, 0, var(--dropdown-bg-opacity));
+  backdrop-filter: blur(8px); /* nhẹ hơn để không mất nét chữ */
+  }
+
+  .mobile-menu.active {
+    display: block;
+  }
+
+  .mobile-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+  }
+
+  .mobile-nav li {
+    margin-bottom: 14px;
+  }
+
+  .mobile-nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  .mobile-auth-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .mobile-auth-buttons .auth-button {
+    font-size: 15px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .auth-button--login {
+    background: transparent;
+    color: #000;
+    border: 1px solid #000;
+  }
+
+  .auth-button--signup {
+    background: #ffd600;
+    color: #000;
+    border: none;
+  }
+}
+
+/* ========================
+   RESPONSIVE PC ONLY
+   ======================== */
+@media (min-width: 769px) {
+  .mobile-only,
+  .mobile-menu {
+    display: none !important;
+  }
+}
+
+/* ===== LOGIN DROPDOWN ===== */
+.mobile-auth-toggle {
+  position: relative;
+}
+
+.mobile-login-dropdown {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+  z-index: 1001;
+}
+
+.mobile-login-dropdown a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.mobile-login-dropdown .login {
+  background: #000;
+  color: #fff;
+}
+
+.mobile-login-dropdown .signup {
+  background: #ffd600;
+  color: #000;
+}
+
+.mobile-login-dropdown.show {
+  display: flex;
+}
+
+/* ===== MENU CẤP 2 (Mobile) ===== */
+.submenu {
+  display: none;
+  flex-direction: column;
+  padding-left: 12px;
+  margin-top: 8px;
+}
+
+.has-submenu > a {
+  position: relative;
+}
+
+.has-submenu:hover > .submenu,
+.has-submenu.show > .submenu {
+  display: flex;
+}
+
+/* ===== BODY LOCK SCROLL WHEN MENU OPEN ===== */
+body.mobile-menu-open {
+  overflow: hidden;
+}
+.mobile-menu,
+.mobile-menu a,
+.mobile-menu li {
+  color: white !important;
+}
+.mobile-login-dropdown {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* nền đen trong suốt */
+  backdrop-filter: blur(10px);          /* làm mờ nhẹ như menu */
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+  z-index: 1001;
+}
+.mobile-login-dropdown .login {
+  background: #fff;
+  color: #000;
+  font-weight: 600;
+}
+
+.mobile-login-dropdown .signup {
+  background: #ffd600;
+  color: #000;
+  font-weight: 600;
+}
+body.mobile-menu-open {
+  overflow: hidden;
+}
+.hamburger-line {
+  width: 22px;
+  height: 2px;
+  background-color: #fff; /* trắng sáng rõ ràng */
+  border-radius: 1px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); /* đổ bóng nhẹ để tách nền */
+  transition: background-color 0.2s ease;
+}
+body.mobile-menu-open {
+  overflow: hidden;
+}
+.has-submenu > ul {
+  display: none;
+}
+.has-submenu.show > ul {
+  display: block;
+}
+

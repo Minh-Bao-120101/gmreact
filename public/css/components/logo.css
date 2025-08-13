@@ -1,0 +1,22 @@
+/* LOGO – ảnh SVG hoặc fallback dạng chữ */
+.header__logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--color-text-strong);
+  font-weight: 700;
+  font-size: var(--font-size-lg);
+}
+
+.logo-img {
+  max-height: 36px;
+  height: auto;
+  display: block;
+}
+
+.logo-text {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Grandmarrkets</title>
+    <link rel="stylesheet" href="/css/components/tp-auth.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="auth-wrapper">
+      <h2>Login to Your Account</h2>
+      <form class="auth-form" id="loginForm">
+        <div class="form-group">
+          <input
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
+        </div>
+        <button type="submit">Login</button>
+      </form>
+      <div class="auth-footer">
+        Don't have an account? <a href="register.html">Register</a>
+      </div>
+    </div>
+
+    <script src="../scripts/auth-login.js"></script>
+  </body>
+</html>

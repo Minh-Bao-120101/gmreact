@@ -1,0 +1,85 @@
+/* === GM CARD – card chuẩn cho News & Promotions === */
+.gm-card {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  background: #0f0f12;
+  border: 1px solid #1e1e24;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.18s ease, box-shadow 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.gm-card:hover {
+  transform: translateY(-2px);
+  border-color: #2a2a33;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+}
+
+.gm-card__link {
+  display: contents;
+}
+
+.gm-card__media {
+  aspect-ratio: 16/9;
+  background: #141419;
+}
+.gm-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gm-card__body {
+  padding: 16px;
+  display: grid;
+  gap: 10px;
+}
+
+.gm-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.875rem;
+  color: #9aa0a6;
+}
+
+.gm-card__title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #f0f3f7;
+  line-height: 1.35;
+}
+
+.gm-card__excerpt {
+  color: #c9cdd3;
+  font-size: 0.95rem;
+}
+
+.gm-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  background: #1b1f2a;
+  color: #cbd5e1;
+  border: 1px solid #2a2f3d;
+}
+.gm-pill--news {
+  background: #162641;
+  border-color: #23406d;
+  color: #bcd3ff;
+}
+.gm-pill--promo {
+  background: #2c1e11;
+  border-color: #52351f;
+  color: #ffd9b0;
+}
+.gm-pill--platform {
+  background: #112a25;
+  border-color: #1e4b40;
+  color: #b9f0e1;
+}

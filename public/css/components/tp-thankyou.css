@@ -1,0 +1,68 @@
+/* ==== THANK YOU - Dark Mode ==== */
+body {
+  font-family: "Bai Jamjuree", sans-serif;
+  margin: 0;
+  background: #000;      /* nền toàn trang đen */
+  color: #fff;           /* chữ trắng mặc định */
+}
+
+.tp-thankyou {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.thankyou-wrapper {
+  background: #111;                       /* card tối */
+  border: 1px solid #222;                 /* viền nhẹ để tách khỏi nền */
+  border-radius: 16px;
+  padding: 60px 40px;
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 18px 60px rgba(0,0,0,0.6), 
+              0 2px 10px rgba(0,0,0,0.35); /* bóng đổ cho nổi khối */
+}
+
+.thankyou-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  color: var(--color-primary, #ffd422);   /* icon vàng nổi bật */
+}
+
+.thankyou-title {
+  font-size: 28px;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.thankyou-message {
+  font-size: 16px;
+  color: #cfcfcf;                         /* xám sáng dễ đọc trên nền tối */
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+/* Button giữ vàng, chữ đen để tương phản tốt */
+.btn {
+  background: var(--color-primary, #ffd422);
+  color: var(--color-on-primary, #000);
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn:hover { opacity: 0.9; }
+
+/* Trạng thái focus để truy cập tốt hơn */
+.btn:focus {
+  outline: 2px solid #f2c800;
+  outline-offset: 2px;
+}

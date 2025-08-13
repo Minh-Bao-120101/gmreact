@@ -1,0 +1,47 @@
+/* === COMPONENT: BUTTON === */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 160px;
+  min-height: 48px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: #ffd422;
+  color: #111;
+}
+
+.btn-primary:hover {
+  background-color: #e6be1a;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #ffd422;
+  border: 2px solid #ffd422;
+}
+
+.btn-outline:hover {
+  background-color: #ffd422;
+  color: #111;
+}
+
+/* === COMPONENT: BUTTON GROUP === */
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--btn-gap, 2rem); /* Giá trị mặc định: 2rem */
+  margin-top: 1.5rem;
+}

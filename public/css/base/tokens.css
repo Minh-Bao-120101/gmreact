@@ -1,0 +1,56 @@
+/* =========================================================
+    DESIGN TOKENS – GrandMarkets Website
+   Font: Bai Jamjuree (Google Fonts)
+   ========================================================= */
+
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600;700&display=swap");
+
+:root {
+  /* ================================
+      COLOR PALETTE
+     ================================ */
+  --color-primary: #ffd422; /* Bright yellow – buttons, hover, CTA */
+  --color-on-primary: #202020; /* Text trên nền vàng */
+
+  --color-background: #0e0e0e; /* 🌑 Nền tối chủ đạo toàn trang, chuyển sang sáng: --color-background: #f9f9f9; /* Apple-style soft white – default page background */
+  --color-surface: #1a1a1a; /* Bề mặt nổi hơn – dùng cho card, section */
+  --color-border: #2a2a2a; /* Viền xám đậm – dùng phân tách nhẹ */
+
+  --color-text-strong: #ffffff; /* Tiêu đề, nhấn mạnh */
+  --color-text: #d0d0d0; /* Văn bản bình thường */
+  --color-accent: #ff8c00; /* Orange – accent phụ */
+  --color-shadow: rgba(0, 0, 0, 0.4); /* Đổ bóng mềm tối */
+  --color-overlay: rgba(255, 212, 34, 0.08); /* Hiệu ứng phủ nhẹ */
+
+  /* ================================
+      TYPOGRAPHY
+     ================================ */
+  --font-body: "Bai Jamjuree", sans-serif;
+  --font-heading: "Bai Jamjuree", sans-serif;
+
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-base: 1rem; /* 16px */
+  --font-size-lg: 1.25rem; /* 20px */
+  --font-size-xl: 2rem; /* 32px */
+  --font-size-xxl: 3rem; /* 48px */
+
+  /* ================================
+      SPACING SCALE
+     ================================ */
+  --space-xxs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-xxl: 48px;
+  --space-auth: 100px;
+
+  /* ================================
+      BORDER RADIUS & SHADOW
+     ================================ */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+}

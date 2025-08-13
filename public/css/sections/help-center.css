@@ -1,0 +1,73 @@
+/* =========================================================
+   HELP CENTER PAGE – Sections styling
+   ========================================================= */
+
+/* ===== Base wrapper ===== */
+.hc-section {
+  padding-block: var(--space-xxl);
+  background: transparent;
+  text-align: center;
+}
+
+/* ===== Search box ===== */
+.hc-search input[type="search"] {
+  font-size: 1rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  padding: 0.875rem 1rem;
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hc-search input[type="search"]:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px var(--color-primary-alpha);
+}
+
+.hc-search button {
+  flex-shrink: 0;
+}
+
+/* ===== FAQ List ===== */
+.hc-faq-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hc-faq-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.hc-faq-list li:last-child {
+  border-bottom: none;
+}
+
+.hc-faq-list a {
+  color: var(--color-text);
+  transition: color 0.2s ease;
+}
+
+.hc-faq-list a:hover {
+  color: var(--color-primary);
+}
+
+/* ===== Support cards ===== */
+#hc-support-team .at-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* ===== Responsive tweaks ===== */
+@media (max-width: 640px) {
+  .hc-search {
+    flex-direction: column;
+  }
+  .hc-search button {
+    width: 100%;
+  }
+}
+.gm-acc-trigger{
+  color: aliceblue;
+}

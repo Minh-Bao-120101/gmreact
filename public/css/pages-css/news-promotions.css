@@ -1,0 +1,193 @@
+/* === NEWS & PROMOTIONS PAGE === */
+#news-promotions .container {
+  padding-top: 48px;
+  padding-bottom: 64px;
+}
+
+.np__head {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.section__title {
+  font-weight: 700;
+}
+.section__subtitle {
+  color: #a6adbb;
+}
+
+.np__controls {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+  align-items: center;
+  margin: 20px 0 28px;
+}
+
+.np__search input {
+  width: 100%;
+  height: 44px;
+  border-radius: 10px;
+  padding: 0 14px;
+  border: 1px solid #242632;
+  background: #0f131a;
+  color: #e5e7eb;
+}
+
+.np__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.np__pill {
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid #242632;
+  background: #0f131a;
+  color: #cbd5e1;
+  font-weight: 600;
+  transition: all 0.15s;
+}
+.np__pill:hover {
+  border-color: #3a4155;
+}
+.np__pill.is-active {
+  background: #ffd422;
+  color: #111;
+  border-color: #ffd422;
+}
+
+.np__sort select {
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #242632;
+  background: #0f131a;
+  color: #e5e7eb;
+  padding: 0 12px;
+}
+
+.np__grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media (min-width: 720px) {
+  .np__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1080px) {
+  .np__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.np__empty {
+  margin: 20px 0;
+  padding: 16px;
+  border-radius: 12px;
+  text-align: center;
+  background: #12151e;
+  color: #cbd5e1;
+  border: 1px dashed #2a2f3d;
+}
+
+.np__pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 24px;
+}
+.np__page-btn {
+  min-width: 96px;
+  height: 40px;
+  border-radius: 10px;
+  font-weight: 700;
+  border: 1px solid #242632;
+  background: #0f131a;
+  color: #cbd5e1;
+}
+.np__page-btn[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.np__page-info {
+  color: #9aa0a6;
+}
+
+/* === NP HERO (campaign banner) === */
+.np-hero {
+  position: relative;
+  border: 1px solid #1e1e24;
+  border-radius: 16px;
+  overflow: hidden;
+  min-height: 280px;
+  margin: 16px 0 24px;
+  background: #0f0f12;
+}
+.np-hero__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: saturate(1.05) contrast(1.02);
+  transform: scale(1.02);
+}
+.np-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(8, 10, 14, 0.55),
+    rgba(8, 10, 14, 0.85)
+  );
+}
+.np-hero__inner {
+  position: relative;
+  z-index: 1;
+  padding: 36px 20px;
+  text-align: center;
+  display: grid;
+  gap: 12px;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.np-hero__topline {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.np-hero__pill {
+  background: #1b1f2a;
+  border: 1px solid #2a2f3d;
+  color: #1b1f2a;
+}
+.np-hero__countdown {
+  color: #cbd5e1;
+  font-weight: 700;
+}
+.np-hero__countdown {
+  color: #cbd5e1;
+  font-weight: 700;
+}
+
+.np-hero__title {
+  color: #f3f4f6;
+  font-weight: 800;
+  font-size: clamp(1.4rem, 1.1rem + 1.6vw, 2.1rem);
+}
+.np-hero__excerpt {
+  color: #cbd5e1;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+@media (min-width: 960px) {
+  .np-hero__inner {
+    padding: 48px 24px;
+  }
+}
