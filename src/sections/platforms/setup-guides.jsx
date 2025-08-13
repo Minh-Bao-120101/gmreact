@@ -5,7 +5,7 @@ export default function SetupGuides() {
     <>
       <section id="pl-setup" className="at-section container slide-up">
         <h2 className="section__title">Setup Guides</h2>
-        <div className="gm-accordion" data-accordion="" style="text-align: left; max-width: 960px; margin: var(--space-xl) auto 0">
+        <div className="gm-accordion" data-accordion="" style={{ textAlign: 'left', maxWidth: '960px', margin: 'var(--space-xl) auto 0' }}>
           <div className="accordion__item">
             <button className="accordion__trigger">
               <span className="accordion__title"> Install &amp; Login (Desktop)</span>

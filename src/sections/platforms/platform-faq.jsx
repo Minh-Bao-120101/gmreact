@@ -5,7 +5,7 @@ export default function PlatformFaq() {
     <>
       <section id="pl-faq" className="at-section container fade-in">
         <h2 className="section__title">Platform FAQs</h2>
-        <div className="gm-accordion" data-accordion="" style="text-align: left; max-width: 960px; margin: var(--space-xl) auto 0">
+        <div className="gm-accordion" data-accordion="" style={{ textAlign: 'left', maxWidth: '960px', margin: 'var(--space-xl) auto 0' }}>
          
           <div className="accordion__item">
             <button className="accordion__trigger">

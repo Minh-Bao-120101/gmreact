@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import logo from "../../assets/logo/gm-logo.png"
+
+  
+
 export default function Footer() {
+
   return (
     <footer className="gm-footer dark-mode" role="contentinfo">
       <div className="container">

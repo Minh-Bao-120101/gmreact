@@ -27,7 +27,7 @@ export default function Bonus30() {
               </section>
       
               
-              <article className="article" style="margin-top: 24px">
+              <article className="article" style={{ marginTop: '24px' }}>
                 <div className="article__content">
                   <h2>Eligibility &amp; Terms</h2>
                   <ul>

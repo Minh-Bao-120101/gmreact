@@ -1,36 +1,31 @@
 import { useState, useEffect } from 'react';
+import { Routes, Route, useLocation } from "react-router-dom";
 import Header from './sections/global/header';
 import Footer from './sections/global/footer';
-import HeroSection from './sections/hero-section';
-import AccountSection from './sections/account-section';
-import MarketLive from './sections/market-section';
-import PartnerSection from './sections/partner-section';
-import Deposit from './sections/deposit-section';
-import CTA from './sections/cta-end-section';
+import Index from './pages/index.jsx';
+import NewsPromotions from './pages/news-promotions.jsx';
 import AccType from './pages/account-types';
-
+import HelpCenter from './pages/help-center.jsx';
+import Partner from './pages/partner.jsx';
+import PartnerD from './pages/partner-detail.jsx';
+import TradingPlatforms from './pages/trading-platforms.jsx';
+import MainJSLoader from './sections/global/MainJSLoader.jsx';
 function App() {
-  const [count, setCount] = useState(0);
-
-  // Nếu main.js chứa các DOM manipulation thuần JS, bạn nên dùng useEffect
-  useEffect(() => {
-    // import dynamic để chạy main.js chỉ trên client
-    import('./js/main.js').then((module) => {
-      if (module.init) module.init(); // giả sử main.js export function init()
-    });
-  }, []);
-
+ 
   return (
     <>
       <Header />
-      {/* Uncomment các section khi cần hiển thị */}
-      {/* <HeroSection /> */}
-      {/* <AccountSection /> */}
-      {/* <MarketLive /> */}
-      {/* <PartnerSection /> */}
-      {/* <Deposit /> */}
-      <AccType />
-      {/* <CTA /> */}
+<MainJSLoader></MainJSLoader>
+      <Routes>
+        <Route path="/" element={<Index />} />                    
+        <Route path="/account-types" element={<AccType />} />
+        <Route path="/news-promotions" element={<NewsPromotions />} /> 
+        <Route path="/partner" element={<Partner />} />        
+        <Route path="/partner-detail" element={<PartnerD />} />
+        <Route path="/trading-platforms" element={<TradingPlatforms />} />
+        <Route path="/help-center" element={<HelpCenter />} />   
+      </Routes>
+
       <Footer />
     </>
   );

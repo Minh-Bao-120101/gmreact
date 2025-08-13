@@ -1,102 +1,104 @@
-import React from "react";
-import logo from "../../assets/logo/gm-logo.png"
-import logologin from "../../assets/icon/login-icon.svg"
+import React, { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import logo from "../../assets/logo/gm-logo.png";
+import logologin from "../../assets/icon/login-icon.svg";
+import Index from '../../pages/index.jsx';
+import NewsPromotions from '../../pages/news-promotions.jsx';
+import AccType from '../../pages/account-types';
+import HelpCenter from '../../pages/help-center.jsx';
+import Partner from '../../pages/partner.jsx';
+import PartnerD from '../../pages/partner-detail.jsx';
+import TradingPlatforms from '../../pages/trading-platforms.jsx';
+import MainJSLoader from '../../sections/global/MainJSLoader.jsx';
 const Header = () => {
+
   return (
     <header className="header">
       <div className="header__inner">
         {/* LOGO */}
-        <div className="header__logo" style={{ paddingRight: "var(--space-xl)" }}>
+        <div
+          className="header__logo"
+          style={{ paddingRight: "var(--space-xl)" }}
+        >
           <a href="/">
-            <img
-              src={logo}
-              
-              alt="GrandMarkets Logo"
-              className="logo-img"
-            />
+            <img src={logo} alt="GrandMarkets Logo" className="logo-img" />
           </a>
         </div>
 
         {/* MAIN MENU - PC ONLY */}
         <nav className="header__nav-wrapper desktop-only">
           <ul className="header__nav">
-            {/* menu content giữ nguyên như cũ */}
             <li>
-              <a href="../../index.html">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="../../pages/account-types.html">Account Types</a>
+              <Link to="/account-types">Account Types</Link>
               <ul>
                 <li>
-                  <a href="../../pages/account-types.html">ECN Account</a>
+                  <Link to="/account-types">ECN Account</Link>
                 </li>
                 <li>
-                  <a href="../../pages/account-types.html">Standard Account</a>
+                  <Link to="/account-types">Standard Account</Link>
                 </li>
                 <li>
-                  <a href="../../pages/account-types.html">Cent Account</a>
+                  <Link to="/account-types">Cent Account</Link>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="../../pages/news-promotions.html">News & Promotions</a>
+              <Link to="/">News & Promotions</Link>
             </li>
             <li>
-              <a href="../../pages/partner.html">Partnership</a>
+              <Link to="/partner">Partnership</Link>
               <ul>
                 <li>
-                  <a href="../../pages/partner-detail.html">IB Program</a>
+                  <Link to="/partner-detail">IB Program</Link>
                 </li>
                 <li>
-                  <a href="../../pages/partner-detail.html">Agency</a>
+                  <Link to="/partner-detail">Agency</Link>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="../../pages/trading-platforms.html">Trading Platforms</a>
+              <Link to="/trading-platforms">Trading Platforms</Link>
               <ul>
                 <li>
-                  <a href="../../pages/trading-platforms.html">Download MT4</a>
+                  <Link to="/trading-platforms">Download MT4</Link>
                 </li>
                 <li>
-                  <a href="../../pages/trading-platforms.html">Download MT5</a>
+                  <Link to="/trading-platforms">Download MT5</Link>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="../../pages/help-center.html">Help Center</a>
+              <Link to="/help-center">Help Center</Link>
               <ul>
                 <li>
-                  <a href="#">FAQs</a>
+                  <Link to="#">FAQs</Link>
                   <ul>
                     <li>
-                      <a href="../../pages/help-center.html">Account Guide</a>
+                      <Link to="/help-center">Account Guide</Link>
                     </li>
                     <li>
-                      <a href="../../pages/help-center.html">
-                        Registration Instructions
-                      </a>
+                      <Link to="/help-center">Registration Instructions</Link>
                     </li>
                     <li>
-                      <a href="../../pages/help-center.html">
-                        Deposits & Withdrawals
-                      </a>
+                      <Link to="/help-center">Deposits & Withdrawals</Link>
                     </li>
                     <li>
-                      <a href="../../pages/help-center.html">
-                        Verification Guide
-                      </a>
+                      <Link to="/help-center">Verification Guide</Link>
                     </li>
                   </ul>
                 </li>
                 <li>
-                  <a href="../../pages/help-center.html">Support Team</a>
+                  <Link to="/help-center">Support Team</Link>
                 </li>
                 <li>
-                  <a href="#">Copy Trading Help</a>
+                  <Link to="#">Copy Trading Help</Link>
                 </li>
                 <li>
-                  <a href="#">Platform Support</a>
+                  <Link to="#">Platform Support</Link>
                 </li>
               </ul>
             </li>
@@ -108,18 +110,12 @@ const Header = () => {
           className="header__auth desktop-only"
           style={{ paddingLeft: "var(--space-xl)" }}
         >
-          <a
-            href="../pages/login.html"
-            className="auth-button auth-button--login"
-          >
+          <Link to="/login" className="auth-button auth-button--login">
             Sign In
-          </a>
-          <a
-            href="../pages/register.html"
-            className="auth-button auth-button--signup"
-          >
+          </Link>
+          <Link to="/register" className="auth-button auth-button--signup">
             Sign Up
-          </a>
+          </Link>
         </div>
 
         {/* MOBILE ICONS (Login Dropdown + Hamburger) */}
@@ -134,12 +130,12 @@ const Header = () => {
               />
             </button>
             <div id="loginDropdown" className="mobile-login-dropdown">
-              <a href="../pages/login.html" className="auth-button login">
+              <Link to="/login" className="auth-button auth-button--login">
                 Sign In
-              </a>
-              <a href="../pages/register.html" className="auth-button signup">
+              </Link>
+              <Link to="/register" className="auth-button auth-button--signup">
                 Sign Up
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -156,61 +152,75 @@ const Header = () => {
       <div className="mobile-menu" id="mobileMenu">
         <ul className="mobile-nav">
           <li>
-            <a href="../../index.html">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="../../pages/account-types.html">Account Types</a>
+            <Link to="/account-types">Account Types</Link>
             <ul>
               <li>
-                <a href="../../pages/account-types.html">ECN Account</a>
+                <Link to="/account-types">ECN Account</Link>
               </li>
               <li>
-                <a href="../../pages/account-types.html">Standard Account</a>
+                <Link to="/account-types">Standard Account</Link>
               </li>
               <li>
-                <a href="../../pages/account-types.html">Cent Account</a>
+                <Link to="/account-types">Cent Account</Link>
               </li>
             </ul>
           </li>
           <li>
-            <a href="../../pages/news-promotions.html">News & Promotions</a>
+            <Link to="/news-promotions">News & Promotions</Link>
           </li>
           <li>
-            <a href="../../pages/partner.html">Partnership</a>
+            <Link to="/partner">Partnership</Link>
             <ul>
               <li>
-                <a href="../../pages/partner-detail.html">IB Program</a>
+                <Link to="/partner-detail">IB Program</Link>
               </li>
               <li>
-                <a href="../../pages/partner-detail.html">Agency</a>
+                <Link to="/partner-detail">Agency</Link>
               </li>
             </ul>
           </li>
           <li>
-            <a href="../../index.html">Trading Platforms</a>
+            <Link to="/trading-platforms">Trading Platforms</Link>
             <ul>
               <li>
-                <a href="../../index.html">Download MT4</a>
+                <Link to="/trading-platforms">Download MT4</Link>
               </li>
               <li>
-                <a href="../../index.html">Download MT5</a>
+                <Link to="/trading-platforms">Download MT5</Link>
               </li>
             </ul>
           </li>
           <li>
-            <a href="../../pages/help-center.html">Help Center</a>
+            <Link to="/help-center">Help Center</Link>
             <ul>
               <li>
-                <a href="#">FAQs</a>
+                <Link to="#">FAQs</Link>
+                <ul>
+                  <li>
+                    <Link to="/help-center">Account Guide</Link>
+                  </li>
+                  <li>
+                    <Link to="/help-center">Registration Instructions</Link>
+                  </li>
+                  <li>
+                    <Link to="/help-center">Deposits & Withdrawals</Link>
+                  </li>
+                  <li>
+                    <Link to="/help-center">Verification Guide</Link>
+                  </li>
+                </ul>
               </li>
               <li>
-                <a href="../../pages/help-center.html">Support Team</a>
+                <Link to="/help-center">Support Team</Link>
               </li>
               <li>
-                <a href="../../pages/help-center.html">Copy Trading Help</a>
+                <Link to="#">Copy Trading Help</Link>
               </li>
               <li>
-                <a href="../../pages/help-center.html">Platform Support</a>
+                <Link to="#">Platform Support</Link>
               </li>
             </ul>
           </li>

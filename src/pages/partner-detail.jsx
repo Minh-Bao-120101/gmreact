@@ -1,35 +1,34 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
+import Header from "../sections/global/header";
+import Footer from "../sections/global/footer";
+import WhyPartner from "../sections/partner-detail/why-partner";
+import HowToStart from "../sections/partner-detail/how-to-start";
+import OurSupport from "../sections/partner-detail/our-support";
+import PaymentStructure from "../sections/partner-detail/payment-structure";
+import CareerGrowth from "../sections/partner-detail/career-growth";
+import CompeteProfessional from "../sections/partner-detail/compete-professional";
+import PartnerDetailCTA from "../sections/partner-detail/partner-detail-cta";
+import RegisterModal from "../sections/modals/register-modal";
+import CTAEndSection from "../sections/cta-end-section";
 
 export default function PartnerDetail() {
+
   return (
     <>
-      
-          
-          <div data-include="/sections/global/header.html"></div>
-      
-          
-          <div data-include="/sections/partner-detail/why-partner.html"></div>
-          <div data-include="/sections/partner-detail/how-to-start.html"></div>
-          <div data-include="/sections/partner-detail/our-support.html"></div>
-          <div data-include="/sections/partner-detail/payment-structure.html"></div>
-          <div data-include="/sections/partner-detail/career-growth.html"></div>
-          <div data-include="/sections/partner-detail/compete-professional.html"></div>
-          <div data-include="/sections/partner-detail/partner-detail-cta.html"></div>
-      
-          
-          <div data-include="/sections/modals/register-modal.html"></div>
-      
-          
-          <div data-include="/sections/cta-end-section.html"></div>
-      
-          
-          <div data-include="/sections/global/footer.html"></div>
-      
-          
-          
-        
-      
-      
+     
+
+      <WhyPartner />
+      <HowToStart />
+      <OurSupport />
+      <PaymentStructure />
+      <CareerGrowth />
+      <CompeteProfessional />
+      <PartnerDetailCTA />
+
+      <RegisterModal />
+      <CTAEndSection />
+
+    
     </>
   );
 }

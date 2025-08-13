@@ -7,8 +7,10 @@ import AccountFaq from "../sections/account-types/account-faq";
 import AccountCta from "../sections/account-types/account-cta";
 import RegisterModal from "../sections/modals/register-modal";
 import Footer from "../sections/global/footer";
+import React, { useState, useEffect } from 'react';
 
 export default function AccountTypesPage() {
+
   return (
     <>
       {/* <Header /> */}

@@ -8,7 +8,7 @@ export default function HcFaqCategories() {
         <p className="section__desc">Quick answers by category.</p>
       
         
-        <div className="gm-accordion" data-accordion="" style="text-align: left; max-width: 960px; margin: var(--space-xl) auto 0">
+        <div className="gm-accordion" data-accordion="" style={{ textAlign: 'left', maxWidth: '960px', margin: 'var(--space-xl) auto 0' }}>
       
         
       
@@ -51,10 +51,7 @@ export default function HcFaqCategories() {
             </div>
           </div>
       
-      
-         
-      
-          
+    
            <div className="accordion__item">
             <button className="accordion__trigger">
               <span className="accordion__title">  Deposits &amp; Withdrawals</span>
