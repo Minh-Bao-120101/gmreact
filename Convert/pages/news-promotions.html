@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>News & Promotions – GrandMarkets</title>
+    <link rel="stylesheet" href="/css/global.css" />
+    <meta
+      name="description"
+      content="Latest news, platform updates, and promotions from GrandMarkets."
+    />
+  </head>
+
+  <body data-page="news-promotions">
+    <!-- Header -->
+    <header data-include="/sections/global/header.html"></header>
+
+    <!-- NP HERO (campaign) -->
+    <section id="np-hero" class="np-hero" hidden>
+      <div class="np-hero__bg"></div>
+      <div class="np-hero__overlay"></div>
+      <div class="np-hero__inner">
+        <div class="np-hero__topline">
+          <span class="gm-pill np-hero__pill">Campaign</span>
+          <span class="np-hero__countdown" aria-live="polite"></span>
+        </div>
+        <h2 class="np-hero__title"></h2>
+        <p class="np-hero__excerpt"></p>
+        <div class="btn-group" style="--btn-gap: 1rem">
+          <a href="#" class="btn btn-primary np-hero__cta">Explore</a>
+          <a
+            href="/pages/news-promotions.html?cat=promotions"
+            class="btn btn-outline"
+          >
+            View other offers
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <main id="news-promotions" class="section fade-in" aria-labelledby="np-title">
+      <div class="container">
+        <div class="np__head">
+          <h1 id="np-title" class="section__title">News & Promotions</h1>
+          <p class="section__subtitle">
+            News, platform updates, and offers for traders.
+          </p>
+        </div>
+
+        <!-- Controls -->
+        <div class="np__controls" role="region" aria-label="Filters and search">
+          <div class="np__search">
+            <label for="np-search" class="sr-only">Search</label>
+            <input
+              id="np-search"
+              type="search"
+              placeholder="Search by title, content…"
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="np__filters" role="tablist" aria-label="Categories">
+            <button
+              class="np__pill is-active"
+              data-cat="all"
+              role="tab"
+              aria-selected="true"
+            >
+              All
+            </button>
+            <button
+              class="np__pill"
+              data-cat="news"
+              role="tab"
+              aria-selected="false"
+            >
+              News
+            </button>
+            <button
+              class="np__pill"
+              data-cat="promotions"
+              role="tab"
+              aria-selected="false"
+            >
+              Promotions
+            </button>
+            <button
+              class="np__pill"
+              data-cat="platform"
+              role="tab"
+              aria-selected="false"
+            >
+              Platform Update
+            </button>
+          </div>
+
+          <div class="np__sort">
+            <label for="np-sort" class="sr-only">Sort</label>
+            <select id="np-sort">
+              <option value="newest">Newest</option>
+              <option value="oldest">Oldest</option>
+              <option value="alpha">A → Z</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Grid (JSON feed) -->
+        <div
+          id="np-grid"
+          class="np__grid"
+          aria-live="polite"
+          data-source="/assets/data/news.json"
+        ></div>
+
+        <!-- Empty & Pagination -->
+        <div id="np-empty" class="np__empty" hidden>
+          No results found. Try a different keyword.
+        </div>
+
+        <nav class="np__pagination" aria-label="Pagination">
+          <button class="np__page-btn" data-page="prev" disabled>Previous</button>
+          <span class="np__page-info" aria-live="polite">Page 1</span>
+          <button class="np__page-btn" data-page="next">Next</button>
+        </nav>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer data-include="/sections/global/footer.html"></footer>
+
+    <!-- Scripts -->
+    <script type="module" src="/js/main.js"></script>
+
+    <noscript>
+      Please enable JavaScript to use the filtering, search, and pagination features.
+    </noscript>
+  </body>
+</html>

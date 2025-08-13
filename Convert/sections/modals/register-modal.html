@@ -1,0 +1,41 @@
+<!-- sections/modals/register-modal.html -->
+<div id="register-modal" class="modal hidden">
+  <!-- Overlay nền tối → click là đóng -->
+  <div class="modal__overlay" data-close-modal></div>
+
+  <!-- Nội dung modal -->
+  <div class="modal__content">
+    <!-- Nút X đóng modal -->
+    <button class="modal__close" data-close-modal>&times;</button>
+
+    <h2 class="modal__title">Register as a Partner</h2>
+
+    <form class="modal__form">
+      <label>
+        Name
+        <input type="text" name="name" required />
+      </label>
+
+      <label>
+        Email
+        <input type="email" name="email" required />
+      </label>
+
+      <label>
+        Country
+        <input type="text" name="country" required />
+      </label>
+
+      <label>
+        Partnership Type
+        <select name="type" required>
+          <option value="">Select type</option>
+          <option value="ib">Introducing Broker (IB)</option>
+          <option value="agency">Agency Partner</option>
+        </select>
+      </label>
+
+      <button type="submit" class="btn btn-primary">Submit Registration</button>
+    </form>
+  </div>
+</div>

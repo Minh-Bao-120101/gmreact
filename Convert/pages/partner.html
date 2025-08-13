@@ -1,0 +1,35 @@
+<!-- pages/partner.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GrandMarkets Partnership Program</title>
+
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="/css/global.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <div data-include="/sections/global/header.html"></div>
+    <!-- Có thể để modal trong pages/partner.html -->
+    <div data-include="/sections/modals/register-modal.html"></div>
+
+    <!-- PARTNER MAIN SECTION (Full content) -->
+    <div
+      data-include="/sections/partner-detail/partner-main-section.html"
+    ></div>
+
+    <!-- CTA END (Tái sử dụng) -->
+    <div data-include="/sections/cta-end-section.html"></div>
+
+    <!-- Có thể để modal trong pages/partner.html -->
+    <button class="btn btn-primary" data-open-modal>Open Account</button>
+
+    <!-- FOOTER -->
+
+    <!-- Import JS -->
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>
